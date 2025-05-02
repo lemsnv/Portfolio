@@ -1,0 +1,204 @@
+body {
+    background-image: url(images/bg_index.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.x {
+    margin: auto;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    margin-top: -50px;
+}
+
+.head {
+    height: 30px;
+    width: 60px;
+    margin: 0px;
+    border-radius: 15px;
+    background-color: rgb(4, 38, 76);
+    color: white;
+    font-size: 11px;
+    border: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    display: inline-flex;
+    margin-right: 10px;
+}
+.head::after {
+    content: '';
+    background-image: linear-gradient(to bottom right, rgb(103, 205, 252), rgb(0, 30, 166));
+    height: 111%;
+    width: 110%;
+    border-radius: 15px;
+    z-index: -1;
+    position: absolute;
+}
+
+.head::before {
+    content: '';
+    background-image: linear-gradient(to bottom right, white, gray);
+    height: 111%;
+    width: 110%;
+    border-radius: 15px;
+    z-index: -1;
+    position: absolute;
+}
+
+.head:hover {
+    z-index: 1;
+    transition: 0.2s;
+    transform: scale(1.125);
+
+}
+
+
+.Name {
+    font-size: 30px;
+    text-align: center;
+    font-family: monospace;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+}
+
+.Name2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 100px;
+    font-style: oblique;
+    text-shadow: 9px -4px 5px #4d4f5090;
+    margin-top: -20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SPIN PROPERTY ----------------------------------------------------------------*/
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+/* SPIN PROPERTY ----------------------------------------------------------------*/
+
+.img {
+ 
+    height: 300px;
+    width: 300px;
+    border: solid black 1px;
+    border-radius: 100%;
+  
+ display: block;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.imgs {
+    margin: auto;
+}
+
+.imgs::after {
+
+    content: '';
+    inset: -5px;
+    width: 315px;
+    height: 315px;
+    border-radius: 100%;
+    position: absolute;
+
+    background: conic-gradient(from var(--angle),  #00000073, #009ce46b);
+    margin: auto;
+    margin-top: -2px;
+    
+    z-index: -1;
+
+    filter: blur(35px);
+    opacity: 1;
+    animation: spin 2s linear infinite;
+    transition: all 1s linear infinite;
+}
+.imgs::before {
+    content: "";
+    inset: -5px;
+    position: absolute;
+    width: 315px;
+    height: 315px;
+    border-radius: 100%;
+    background: conic-gradient(from var(--angle), #000000, #009ce4);
+    margin: auto;
+    margin-top:-2px;
+    
+    z-index: -1;
+
+    animation: spin 2s linear infinite;
+}
+
+/*-------------------------- SPIN KEYFRAME ----------------------------------------------------------------*/
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+/*-------------------------- SPIN KEYFRAME ----------------------------------------------------------------*/
+
+.Name::after {
+    content: "";
+    background-color: rgb(0, 179, 255);
+    border-radius: 10px;
+    height: 2px;
+    width: 30px;
+    position: absolute;
+    display: block;
+    margin-top: -50px;
+    margin-left: 14.5px;
+}
+
+h4 { 
+    color: white;
+    font-style: oblique;
+    font-family: monospace;
+}
+
+
+
+
+
+
